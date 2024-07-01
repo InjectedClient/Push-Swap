@@ -42,7 +42,7 @@ int	*ft_index(int *tab, int size)
     return (tmp);
 }
 /*Cette fonction initialise les piles A et B et leur alloue la mémoire pour
-stocker argc - 1 éléments. Elle donne également à 'top' la valeur de size_a / 2
+stocker argc - 1 éléments. Elle donne également à 'haut' la valeur de size_a / 2
 et écrase les anciennes valeurs des piles pour avoir celles de l'index.*/
 t_stack	initialize_stack(int argc, char **argv)
 {

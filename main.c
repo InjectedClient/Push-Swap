@@ -12,18 +12,12 @@
 
 #include "push_swap.h"
 
-/*Cette fonction libère la mémoire allouée pour les piles A et B dans la structure t_stack.*/
 void	clean(t_stack *t)
 {
     free(t->a);
     free(t->b);
 }
-/*
-Verifie mes arguments
-Si +/= deux arguments initalise pile A et B avec
-Verif si les piles sont triees, si vide nettoie la memoire et termine
-En fonction du nombre d'elements appel un algo different
-Pour finir clean la memoire puis termine le programme*/
+
 int main(int argc, char **argv)
 {
 	t_stack t;
