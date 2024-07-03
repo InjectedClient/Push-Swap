@@ -6,7 +6,7 @@
 /*   By: nlambert <nlambert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 17:45:39 by nlambert          #+#    #+#             */
-/*   Updated: 2024/06/28 15:43:33 by nlambert         ###   ########.fr       */
+/*   Updated: 2024/07/03 16:45:54 by nlambert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	opti_half(t_stack *t)
 		rb(t);
 }
 
-void half_to_b(t_stack *t)
+void	half_to_b(t_stack *t)
 {
 	int	tmp;
 
@@ -49,7 +49,7 @@ void half_to_b(t_stack *t)
 				ra(t);
 			pb(t);
 			if (t->size_a == 3)
-				break;
+				break ;
 			opti_half(t);
 		}
 	}

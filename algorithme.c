@@ -6,7 +6,7 @@
 /*   By: nlambert <nlambert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 17:58:55 by nlambert          #+#    #+#             */
-/*   Updated: 2024/06/28 16:11:19 by nlambert         ###   ########.fr       */
+/*   Updated: 2024/07/03 16:36:30 by nlambert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ void	algo2(t_stack *t)
 	if (t->a[0] > t->a[1])
 		sa(t);
 }
-void algo3(t_stack *t)
+
+void	algo3(t_stack *t)
 {
 	if (t->a[0] > t->a[1] && t->a[1] < t->a[t->size_a - 1])
 	{
@@ -26,7 +27,7 @@ void algo3(t_stack *t)
 		else if (t->a[1] < t->a[t->size_a - 1])
 			ra(t);
 	}
-	else  if (t->a[0] > t->a[1] && t->a[1] > t->a[t->size_a - 1])
+	else if (t->a[0] > t->a[1] && t->a[1] > t->a[t->size_a - 1])
 	{
 		sa(t);
 		rra(t);
@@ -63,7 +64,7 @@ void	algo4_5(t_stack *t)
 		pb(t);
 	}
 	algo3(t);
-	while(t->size_b)
+	while (t->size_b)
 		pa(t);
 }
 
@@ -76,4 +77,3 @@ void	algo5_plus(t_stack *t)
 	insert_b_to_a(t);
 	end(t);
 }
-

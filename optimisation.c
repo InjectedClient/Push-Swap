@@ -6,7 +6,7 @@
 /*   By: nlambert <nlambert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 16:46:42 by nlambert          #+#    #+#             */
-/*   Updated: 2024/06/27 13:23:54 by nlambert         ###   ########.fr       */
+/*   Updated: 2024/07/03 16:51:20 by nlambert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_cmd	check_best_rot(t_cmd cmd)
 {
-	while(cmd.ra && cmd.rb)
+	while (cmd.ra && cmd.rb)
 	{
 		cmd.ra--;
 		cmd.rb--;
@@ -32,6 +32,7 @@ t_cmd	check_best_rot(t_cmd cmd)
 	}
 	return (cmd);
 }
+
 t_cmd	check_best_rev(t_cmd cmd)
 {
 	while (cmd.rra && cmd.rrb)
@@ -52,9 +53,10 @@ t_cmd	check_best_rev(t_cmd cmd)
 	}
 	return (cmd);
 }
+
 t_cmd	check_best(t_cmd cmd, t_cmd cmd_best)
 {
-	t_cmd clone;
+	t_cmd	clone;
 
 	clone = cmd;
 	cmd = check_best_rot(cmd);
@@ -64,6 +66,7 @@ t_cmd	check_best(t_cmd cmd, t_cmd cmd_best)
 		cmd_best = clone;
 	return (cmd_best);
 }
+
 void	insert_b_to_a(t_stack *t)
 {
 	t_cmd	cmd_best;
@@ -90,6 +93,7 @@ void	insert_b_to_a(t_stack *t)
 			t->bas = t->a[0];
 	}
 }
+
 void	end(t_stack *t)
 {
 	if (t->a[0] <= t->size_a / 2 + 1)

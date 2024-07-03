@@ -6,7 +6,7 @@
 /*   By: nlambert <nlambert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 15:26:53 by nlambert          #+#    #+#             */
-/*   Updated: 2024/06/28 16:11:33 by nlambert         ###   ########.fr       */
+/*   Updated: 2024/07/03 16:53:14 by nlambert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ typedef struct s_stack
 	int	*b;
 	int	size_a;
 	int	size_b;
-	int bas;
-	int haut;
+	int	bas;
+	int	haut;
 }		t_stack;
 
 typedef struct s_cmd
@@ -38,9 +38,9 @@ typedef struct s_cmd
 }		t_cmd;
 
 long	ft_atol(const char *nptr);
-int ft_error(int argc, char **argv);
-int	*ft_index(int *tab, int size);
-int	verif_tri(t_stack *t);
+int		ft_error(int argc, char **argv);
+int		*ft_index(int *tab, int size);
+int		verif_tri(t_stack *t);
 
 t_stack	stack_param(int argc, char **argv);
 t_stack	initialize_stack(int argc, char **argv);
