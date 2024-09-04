@@ -6,7 +6,7 @@
 /*   By: nlambert <nlambert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 17:58:55 by nlambert          #+#    #+#             */
-/*   Updated: 2024/07/03 16:36:30 by nlambert         ###   ########.fr       */
+/*   Updated: 2024/09/04 15:36:09 by nlambert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,12 @@ void	algo3(t_stack *t)
 
 void	algo4_5(t_stack *t)
 {
+	if (t->size_a == 4)
+	{
+		while (t->a[0] != 1)
+			ra(t);
+		pb(t);
+	}
 	if (t->size_a == 5)
 	{
 		while (t->size_a != 3)
@@ -57,12 +63,6 @@ void	algo4_5(t_stack *t)
 		if (t->b[0] < t->b[1])
 			sb(t);
 	}
-	if (t->size_a == 4)
-	{
-		while (t->a[0] != 1)
-			ra(t);
-		pb(t);
-	}
 	algo3(t);
 	while (t->size_b)
 		pa(t);
@@ -70,7 +70,7 @@ void	algo4_5(t_stack *t)
 
 void	algo5_plus(t_stack *t)
 {
-	half_to_b(t);
+	a_to_b(t);
 	algo3(t);
 	pa(t);
 	t->bas = t->a[0];

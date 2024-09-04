@@ -6,7 +6,7 @@
 /*   By: nlambert <nlambert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 15:26:53 by nlambert          #+#    #+#             */
-/*   Updated: 2024/07/03 16:53:14 by nlambert         ###   ########.fr       */
+/*   Updated: 2024/09/04 15:35:57 by nlambert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void	check_reverse(t_stack *t, t_cmd *cmd);
 void	check_rotate(t_stack *t, t_cmd *cmd);
 void	rotate_up(int *stack, int size);
 void	rotate_down(int *stack, int size);
-void	half_to_b(t_stack *t);
+void	a_to_b(t_stack *t);
 void	opti_half(t_stack *t);
 void	insert_b_to_a(t_stack *t);
 void	ra(t_stack *t);

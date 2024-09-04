@@ -6,7 +6,7 @@
 /*   By: nlambert <nlambert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 17:45:39 by nlambert          #+#    #+#             */
-/*   Updated: 2024/07/03 16:45:54 by nlambert         ###   ########.fr       */
+/*   Updated: 2024/09/04 15:35:49 by nlambert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,26 +31,23 @@ void	opti_half(t_stack *t)
 		rb(t);
 }
 
-void	half_to_b(t_stack *t)
+void	a_to_b(t_stack *t)
 {
-	int	tmp;
+	int	save;
 
-	tmp = t->size_a;
+	save = t->size_a;
 	while (t->size_a >= 3)
 	{
-		if (t->size_a >= 3)
+		if (t->size_b == save / 2)
 		{
-			if (t->size_b == tmp / 2)
-			{
-				t->bas = t->haut;
-				t->haut = tmp - 3;
-			}
-			while (!(t->a[0] >= t->bas && t->a[0] <= t->haut))
-				ra(t);
-			pb(t);
-			if (t->size_a == 3)
-				break ;
-			opti_half(t);
+			t->bas = t->haut;
+			t->haut = save - 3;
 		}
+		while (!(t->a[0] >= t->bas && t->a[0] <= t->haut))
+			ra(t);
+		pb(t);
+		if (t->size_a == 3)
+			break ;
+		opti_half(t);
 	}
 }
