@@ -6,14 +6,12 @@
 /*   By: nlambert <nlambert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 14:48:13 by nlambert          #+#    #+#             */
-/*   Updated: 2024/07/03 16:47:59 by nlambert         ###   ########.fr       */
+/*   Updated: 2024/09/05 15:16:16 by nlambert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/*Creer un tableau et attribue un index à chaque elément de la pile en fonction
-de leur ordre de tri*/
 int	*ft_index(int *tab, int size)
 {
 	int	index;

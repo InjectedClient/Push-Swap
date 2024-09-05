@@ -6,13 +6,13 @@
 /*   By: nlambert <nlambert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 14:19:16 by nlambert          #+#    #+#             */
-/*   Updated: 2024/07/03 16:45:02 by nlambert         ###   ########.fr       */
+/*   Updated: 2024/09/05 15:15:25 by nlambert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/* Cette fonction vérifie si les arguments sont bien des chiffres.*/
+/* check si les arg sont bien des chiffres.*/
 int	ft_error(int argc, char **argv)
 {
 	int			i;
@@ -42,8 +42,8 @@ int	ft_error(int argc, char **argv)
 	return (0);
 }
 
-/* Cette fonction convertit une chaîne de caractères en un long int.
-Elle gère les cas où la chaîne représente un nombre plus grand que INT_MAX. */
+/* convertit une chaîne de caractères en un long int.
++ gère les cas où plus grand que INT_MAX. */
 long	ft_atol(const char *nptr)
 {
 	int			i;
